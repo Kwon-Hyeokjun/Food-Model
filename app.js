@@ -1,12 +1,6 @@
 const data = [
-  { name: "학식당", price: 5000, menu: "돈까스" },
-  { name: "샤브향", price: 15000, menu: "샤브샤브" },
-  { name: "조대포", price: 9000, menu: "돼지국밥" }
+  { category: "분식", name: "명가떡볶이", sub: "떡볶이, 김밥", price: "1만원 이하" },
+  { category: "분식", name: "참새방앗간", sub: "즉석 떡볶이", price: "1만원 이하" },
+  { category: "분식", name: "셀분식", sub: "종합분식", price: "1만원 이하" },
+  { category: "분식", name: "신전떡볶이", sub: "떡볶이, 김밥", price: "1만원 이하" }
 ];
-
-function filterPrice(maxPrice) {
-  const result = data.filter(item => item.price <= maxPrice);
-
-  document.getElementById("result").innerHTML =
-    result.map(r => `<p>${r.name} - ${r.price}원</p>`).join("");
-}
