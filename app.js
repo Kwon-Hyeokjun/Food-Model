@@ -28,6 +28,14 @@ const data = [
 { category: "일식", name: "에비수", sub: "롤, 덮밥", price: "2만원 이하" },
 { category: "일식", name: "한그릇", sub: "덮밥", price: "2만원 이하" },
 { category: "일식", name: "핵밥", sub: "덮밥", price: "2만원 이하" },
+    { category: "중식", name: "북경반점", sub: "짜장면, 짬뽕", price: "1만원 이하" },
+    { category: "중식", name: "도야짬뽕", sub: "짜장면, 짬뽕", price: "2만원 이하" },
+    { category: "중식", name: "전국5대짬뽕 교동짬뽕", sub: "짜장면, 짬뽕", price: "1만원 이하" },
+    { category: "중식", name: "찐하오마라탕", sub: "마라탕", price: "1800/100g" },
+    { category: "중식", name: "라화쿵푸", sub: "마라탕", price: "1850/100g" },
+    { category: "중식", name: "홍성마라미방", sub: "마라탕", price: "1800/100g" },
+    { category: "중식", name: "산시도삭면", sub: "딤섬, 도삭면", price: "1만원 이하" },
+    { category: "중식", name: "대홍훠거샤브샤브", sub: "훠궈", price: "3만원 이하" },
 
 
 ];
