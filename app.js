@@ -19,6 +19,6 @@ const data = [
   { category: "동남아", name: "인더비엣",   sub: "쌀국수, 볶음밥", price: "2만원 이하" },
   { category: "동남아", name: "남월",       sub: "쌀국수, 볶음밥", price: "1만원 이하" },
   { category: "동남아", name: "자이카",     sub: "카레",          price: "1만원 이하" },
- 
+  { category: "동남아", name: "카바레식당", sub: "카레, 크림우동", price: "2만원 이하" }
 ];
 
