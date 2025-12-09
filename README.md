@@ -61,24 +61,17 @@
 *(웹 UI 구현 시 JavaScript/React 추가 가능)*
 
 
-
-##  설치 방법 
-프로젝트를 로컬에 복제하려면 다음을 실행하세요:
-```bash
-git clone https://github.com/Kwon-Hyeokjun/Food-Model.git
-cd Food-Model
-npm install
-npm start
-
 <br>
 
 ---
 
-##  사용 방법
+## 사용 방법
 - README의 이미지 및 테이블을 참고하여 식당 정보를 확인합니다.
 - CSV/엑셀 데이터를 활용하여 자신의 앱/웹서비스에 적용할 수 있습니다.
 - 직접 식당 데이터를 수정하여 PR로 기여할 수 있습니다.
+<br>
 
+---
 ## 기여자
 권혁준 : 
 민푸름 : 
@@ -112,3 +105,12 @@ MIT License
 ## 연락  
 오류 제보, 기능 요청, 협업 제안은 Issue 또는 Pull Request로 부탁드립니다.
 외의 문의 사항은 조장 권혁준(hyeokjun@gmail.com)에게 연락 바랍니다.
+
+## 설치 방법 
+프로젝트를 로컬에 복제하려면 다음을 실행하세요:
+```bash
+git clone https://github.com/Kwon-Hyeokjun/Food-Model.git
+cd Food-Model
+npm install
+npm start
+
