@@ -20,6 +20,14 @@ const data = [
     { category: "동남아", name: "남월", sub: "쌀국수, 볶음밥", price: "1만원 이하" },
     { category: "동남아", name: "자이카", sub: "카레", price: "1만원 이하" },
     { category: "동남아", name: "카바레식당", sub: "카레, 크림우동", price: "2만원 이하" },
+{ category: "일식", name: "유메", sub: "라멘", price: "1만원 이하" },
+{ category: "일식", name: "오벤라멘", sub: "라멘", price: "1만원 이하" },
+{ category: "일식", name: "백소정", sub: "돈가츠", price: "2만원 이하" },
+{ category: "일식", name: "코운즈", sub: "라멘, 돈가츠", price: "2만원 이하" },
+{ category: "일식", name: "면식당", sub: "라멘, 돈가츠", price: "2만원 이하" },
+{ category: "일식", name: "에비수", sub: "롤, 덮밥", price: "2만원 이하" },
+{ category: "일식", name: "한그릇", sub: "덮밥", price: "2만원 이하" },
+{ category: "일식", name: "핵밥", sub: "덮밥", price: "2만원 이하" },
 
 
 ];
