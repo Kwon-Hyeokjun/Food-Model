@@ -111,3 +111,61 @@ function autoSearch() {
 
   showResult(result);
 }
+// ⭐ 랜덤 추천 기능
+document.getElementById("randomBtn").addEventListener("click", function () {
+  // 현재 카테고리/가격/키워드 조건 적용해서 랜덤 추천하기
+  const keyword = document.getElementById("searchInput").value.trim();
+  const selectedCategory = document.getElementById("categorySelect").value;
+  const selectedPrice = document.getElementById("priceSelect").value;
+
+  // 가격 비교 함수 (기존 autoSearch와 동일)
+  function priceMatch(storePrice, selectedPrice) {
+    if (selectedPrice === "전체") return true;
+    if (!storePrice.includes("이하")) return false;
+
+    const LEVEL = {
+      "1만원 이하": 1,
+      "2만원 이하": 2,
+      "3만원 이하": 3,
+      "4만원 이하": 4,
+    };
+
+    const storeLevel = LEVEL[storePrice];
+    const selectedLevel = LEVEL[selectedPrice];
+
+    if (!storeLevel || !selectedLevel) return false;
+
+    return storeLevel <= selectedLevel;
+  }
+
+  // 현재 조건으로 필터링
+  const filtered = STORE_DATA.filter(store => {
+    const matchCategory =
+      selectedCategory === "전체" || store.category === selectedCategory;
+    const matchPrice = priceMatch(store.price, selectedPrice);
+    const matchKeyword =
+      keyword === "" ||
+      store.name.includes(keyword) ||
+      store.sub.includes(keyword);
+    return matchCategory && matchPrice && matchKeyword;
+  });
+
+  if (filtered.length === 0) {
+    alert("현재 조건에 맞는 식당이 없습니다!");
+    return;
+  }
+
+  // 랜덤으로 하나 추천
+  const randomStore = filtered[Math.floor(Math.random() * filtered.length)];
+
+  // 결과 박스에 강조해서 띄우기
+  document.getElementById("result").innerHTML = `
+    <div class="result-card" style="border: 2px solid #6c5ce7;">
+      <span class="tag tag-${randomStore.category}">${randomStore.category}</span>
+      <div class="store-name">${randomStore.name} 🎉</div>
+      <div class="store-sub">${randomStore.sub}</div>
+      <div class="store-price">${randomStore.price}</div>
+      <p style="margin-top:8px; color:#6c5ce7; font-weight:bold;">랜덤 추천!</p>
+    </div>
+  `;
+});
