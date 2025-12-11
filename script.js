@@ -47,10 +47,18 @@ function showResult(list) {
 
   box.innerHTML = list
     .map(
-      item => `<p><strong>${item.name}</strong> (${item.category})<br>${item.sub} — ${item.price}</p>`
+      item => `
+      <div class="result-card">
+        <span class="tag tag-${item.category}">${item.category}</span>
+        <div class="store-name">${item.name}</div>
+        <div class="store-sub">${item.sub}</div>
+        <div class="store-price">${item.price}</div>
+      </div>
+      `
     )
-    .join("<hr>");
+    .join("");
 }
+
 // ------------------------------
 // ⭐ 카테고리 & 가격 선택 시 자동 검색
 // ------------------------------
