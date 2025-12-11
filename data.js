@@ -69,6 +69,6 @@ const STORE_DATA = [
   { category: "술집", name: "로드락비어", sub: "맥주, 호프", price: "2만원 이하" },
   { category: "술집", name: "밤새", sub: "막걸리", price: "2만원 이하" },
   { category: "술집", name: "락(樂)", sub: "요리주점", price: "2만원 이하" },
-  { category: "술집", name: "달달포차", sub: "포장마차", price: "2만원 이하" },
+   { category: "술집", name: "달달포차", sub: "포장마차", price: "2만원 이하" },
 
 ];
