@@ -69,52 +69,47 @@ README.md : 프로젝트 문서화 정
 3. 충돌 해결 및 커밋 메시지 규칙 준수
 4. VSCode + Git Bash 로컬 환경에서 지속적으로 push
 5. Git 오류 해결과정 포함
-
-
-## GitHub 전체 개발 과정
-1. 개발 초기 : 프로젝트 준비 단계
-
-GitHub 계정 생성 및 SSH/HTTPS 연결 이해
-
-로컬 폴더 git init 실습
-
-origin 추가, main 브랜치 정비
-
-첫 commit/push 성공
-
-2. 개발 중 : 기능 구현 & 버전 관리
-
-feature 단위로 브랜치 생성하여 기능 개발
-
-코드 수정 후 git add → git commit → git push
-
-다음 문제들 발생
-repository not found, no changes added to commit, 로컬 경로와 원격 경로 충돌, 브랜치 이름 mismatch, 상위 폴더가 서브모듈 취급되는 문제
-
-→ Git 구조를 이해하면서 문제 해결
-
-3. GitHub를 통한 협업
-
-팀원이 데이터, UI, 문서, 기능을 각자 push
-
-pull/push 시 충돌 해결
-
-README 업데이트와 코드 개선 과정 기록
-
-GitHub Actions / Pages 배포 가능 구조 유지
-
-4. 최종 단계 : 문서화 & 배포 준비
-
-README 문서 최종 정리
-
-프로젝트 사용 방법, 기술 스택, 기여자 내역 기록
-
-GitHub Pages 배포 준비
-
 <br>
 
 ---
-## 프로젝트의 기여도 : 웹페이지의 중요성 및 필요
+## GitHub 전체 개발 과정
+1. 개발 초기 : 프로젝트 준비 단계
+
+    GitHub 계정 생성 및 SSH/HTTPS 연결 이해
+
+    로컬 폴더 git init 실습
+
+    origin 추가, main 브랜치 정비
+
+    첫 commit/push 성공
+
+2. 개발 중 : 기능 구현 & 버전 관리
+
+    feature 단위로 브랜치 생성하여 기능 개발
+
+    코드 수정 후 git add → git commit → git push
+
+    다음 문제들 발생 : repository not found, no changes added to commit, 로컬 경로와 원격 경로 충돌, 브랜치 이름 mismatch, 상위 폴더가 서브모듈 취급되는     문제
+
+    → Git 구조를 이해하면서 문제 해결
+
+3. GitHub를 통한 협업
+
+    팀원이 데이터, UI, 문서, 기능을 각자 push
+
+    pull/push 시 충돌 해결
+
+    README 업데이트와 코드 개선 과정 기록
+
+    GitHub Actions / Pages 배포 가능 구조 유지
+
+4. 최종 단계 : 문서화 & 배포 준비
+
+    README 문서 최종 정리
+
+    프로젝트 사용 방법, 기술 스택, 기여자 내역 기록
+
+    GitHub Pages 배포 준비
 <br>
 
 ---
