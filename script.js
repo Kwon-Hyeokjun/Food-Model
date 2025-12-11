@@ -45,18 +45,26 @@ function showResult(list) {
     return;
   }
 
-  box.innerHTML = list
-    .map(
-      item => `
+ box.innerHTML = list
+  .map(item => {
+    const naverLink = `https://map.naver.com/v5/search/${encodeURIComponent(item.name)}`;
+
+    return `
       <div class="result-card">
         <span class="tag tag-${item.category}">${item.category}</span>
-        <div class="store-name">${item.name}</div>
+
+        <!-- ⭐ 클릭하면 네이버 지도 이동하는 부분 -->
+        <a href="${naverLink}" target="_blank" class="store-name" style="color:#4a7cff; text-decoration:none;">
+          ${item.name}
+        </a>
+
         <div class="store-sub">${item.sub}</div>
         <div class="store-price">${item.price}</div>
       </div>
-      `
-    )
-    .join("");
+    `;
+  })
+  .join("");
+
 }
 
 // ------------------------------
