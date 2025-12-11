@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>HY-ERICA 식당 검색기</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+  <h1>HY-ERICA 식당 검색기</h1>
+
+  <!-- 검색 -->
+  <input type="text" id="searchInput" placeholder="키워드 입력…" />
+  <button id="searchBtn">검색</button>
+
+  <!-- 카테고리 -->
+  <select id="categorySelect">
+    <option value="전체">전체</option>
+    <option value="분식">분식</option>
+    <option value="간편식">간편식</option>
+    <option value="야식">야식</option>
+    <option value="동남아">동남아</option>
+    <option value="일식">일식</option>
+    <option value="중식">중식</option>
+    <option value="양식">양식</option>
+    <option value="한식">한식</option>
+    <option value="술집">술집</option>
+
+  </select>
+
+  <!-- 가격 -->
+  <select id="priceSelect">
+    <option value="전체">전체</option>
+    <option value="1만원 이하">1만원 이하</option>
+    <option value="2만원 이하">2만원 이하</option>
+    <option value="3만원 이하">3만원 이하</option>
+  </select>
+
+  <hr />
+  <div id="result"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
