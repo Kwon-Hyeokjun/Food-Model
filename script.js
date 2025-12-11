@@ -7,7 +7,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
   // ⭐ 가격 비교 함수
   function priceMatch(storePrice, selectedPrice) {
-    if (selectedPrice === "전체") return true;
+   if (selectedPrice === "전체") return true;
 
     if (storePrice.includes("원")) {
       // ex) "1만원 이하"
@@ -20,7 +20,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
   // ⭐ 필터링 수행
   const result = STORE_DATA.filter(store => {
-    const matchCategory =
+   const matchCategory =
       selectedCategory === "전체" || store.category === selectedCategory;
 
     const matchPrice = priceMatch(store.price, selectedPrice);
@@ -47,10 +47,18 @@ function showResult(list) {
 
   box.innerHTML = list
     .map(
-      item => `<p><strong>${item.name}</strong> (${item.category})<br>${item.sub} — ${item.price}</p>`
+      item => `
+      <div class="result-card">
+        <span class="tag tag-${item.category}">${item.category}</span>
+        <div class="store-name">${item.name}</div>
+        <div class="store-sub">${item.sub}</div>
+        <div class="store-price">${item.price}</div>
+      </div>
+      `
     )
-    .join("<hr>");
+    .join("");
 }
+
 // ------------------------------
 // ⭐ 카테고리 & 가격 선택 시 자동 검색
 // ------------------------------
