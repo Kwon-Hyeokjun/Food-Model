@@ -1,0 +1,90 @@
+/* 전체 화면 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+  background: #f7f8fa;
+  text-align: center;
+}
+
+/* 제목 */
+h1 {
+  padding: 25px 0 10px;
+  margin: 0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 검색 입력창 + 버튼 */
+#searchInput {
+  width: 240px;
+  padding: 12px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+#searchBtn {
+  padding: 12px 18px;
+  margin-left: 8px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background: #3958d5;
+}
+
+/* 카테고리 + 가격 필터 */
+select {
+  padding: 10px 12px;
+  margin: 10px 6px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+/* 결과 영역 */
+#result {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* 개별 카드 스타일 */
+.result-card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result-meta {
+  color: #666;
+  font-size: 14px;
+}
+
+.result-price {
+  margin-top: 5px;
+  color: #4a6cf7;
+  font-weight: 600;
+}
