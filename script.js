@@ -166,7 +166,7 @@ document.getElementById("randomBtn").addEventListener("click", function () {
   // 랜덤으로 하나 추천
   const randomStore = filtered[Math.floor(Math.random() * filtered.length)];
 
-  // 결과 박스에 강조해서 띄우기
+ 
   // 네이버 지도 링크
 const naverLink = `https://map.naver.com/v5/search/${encodeURIComponent(randomStore.name)}`;
 
