@@ -167,13 +167,24 @@ document.getElementById("randomBtn").addEventListener("click", function () {
   const randomStore = filtered[Math.floor(Math.random() * filtered.length)];
 
   // 결과 박스에 강조해서 띄우기
-  document.getElementById("result").innerHTML = `
-    <div class="result-card" style="border: 2px solid #6c5ce7;">
-      <span class="tag tag-${randomStore.category}">${randomStore.category}</span>
-      <div class="store-name">${randomStore.name} 🎉</div>
-      <div class="store-sub">${randomStore.sub}</div>
-      <div class="store-price">${randomStore.price}</div>
-      <p style="margin-top:8px; color:#6c5ce7; font-weight:bold;">랜덤 추천!</p>
-    </div>
-  `;
+  // 네이버 지도 링크
+const naverLink = `https://map.naver.com/v5/search/${encodeURIComponent(randomStore.name)}`;
+
+document.getElementById("result").innerHTML = `
+  <div class="result-card" style="border: 2px solid #6c5ce7;">
+    <span class="tag tag-${randomStore.category}">${randomStore.category}</span>
+
+    <a href="${naverLink}" target="_blank" 
+       class="store-name" 
+       style="color:#4a7cff; font-weight:bold; text-decoration:none;">
+      ${randomStore.name} 🎉
+    </a>
+
+    <div class="store-sub">${randomStore.sub}</div>
+    <div class="store-price">${randomStore.price}</div>
+
+    <p style="margin-top:8px; color:#6c5ce7; font-weight:bold;">랜덤 추천!</p>
+  </div>
+`;
+
 });
