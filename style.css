@@ -157,3 +157,17 @@ h1 {
   font-weight: bold;
   color: #444;
 }
+#randomBtn {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.15s ease;
+}
+
+#randomBtn:hover {
+  background: #5a4bd8;
+}
