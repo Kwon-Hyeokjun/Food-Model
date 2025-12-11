@@ -7,7 +7,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
   // ⭐ 가격 비교 함수
   function priceMatch(storePrice, selectedPrice) {
-    if (selectedPrice === "전체") return true;
+   if (selectedPrice === "전체") return true;
 
     if (storePrice.includes("원")) {
       // ex) "1만원 이하"
@@ -20,7 +20,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 
   // ⭐ 필터링 수행
   const result = STORE_DATA.filter(store => {
-    const matchCategory =
+   const matchCategory =
       selectedCategory === "전체" || store.category === selectedCategory;
 
     const matchPrice = priceMatch(store.price, selectedPrice);
