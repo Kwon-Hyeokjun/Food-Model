@@ -30,18 +30,26 @@
 ---
 ##  기술 스택
 Frontend : HTML, CSS, JavaScript
+
 Storage : LocalStorage
+
 Tools : Git, GitHub, VSCode
+
 배포 환경 : GitHub Pages
 <br>
 
 ---
-**프로젝트 구조**
+## 프로젝트 구조
 Food-Model
+
 index.html : 메인 페이지
+
 tyle.css : 디자인 및 레이아웃
+
 data.js : 식당 데이터 (JSON-like 배열)
+
 script.js : 검색/필터/즐겨찾기 로직
+
 README.md : 프로젝트 문서화 정
 <br>
 
@@ -65,9 +73,12 @@ README.md : 프로젝트 문서화 정
 
 ---
 ## 기여자
-권혁준 : 
+권혁준 :
+
 민푸름 : 
+
 여인규 : 
+
 하서현 : 
 <br>
 
@@ -93,9 +104,13 @@ README.md : 프로젝트 문서화 정
 ---
 ## 향후 개선 방향
 모바일에 대응되는 반응형 디자인 적용
-실제 사용자 피드백 기반 추천 알고리즘 강화    
+
+실제 사용자 피드백 기반 추천 알고리즘 강화
+
 사용자 리뷰 시스템
+
 계정 기반 즐겨찾기
+
 다국어 지원
 <br>
 
