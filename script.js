@@ -174,7 +174,7 @@ document.getElementById("result").innerHTML = `
   <div class="result-card" style="border: 2px solid #6c5ce7;">
     <span class="tag tag-${randomStore.category}">${randomStore.category}</span>
 
-    <a href="${naverLink}" target="_blank" 
+   <a href="${naverLink}" target="_blank" 
        class="store-name" 
        style="color:#4a7cff; font-weight:bold; text-decoration:none;">
       ${randomStore.name} 🎉
