@@ -60,6 +60,8 @@ function showResult(list) {
 
         <div class="store-sub">${item.sub}</div>
         <div class="store-price">${item.price}</div>
+        <div class="map-hint">📍 클릭해서 지도로 이동</div>
+
       </div>
     `;
   })
