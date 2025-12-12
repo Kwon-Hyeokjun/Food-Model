@@ -4,23 +4,21 @@
   <meta charset="UTF-8" />
   <title>HY-ERICA 식당 검색기</title>
 
-  <!-- ================= style.css 병합 ================= -->
+  <!-- ================= CSS ================= -->
   <style>
     body {
       margin: 0;
       padding: 20px;
-      font-family: 'Noto Sans KR', 'Pretendard', sans-serif;
+      font-family: 'Noto Sans KR','Pretendard',sans-serif;
       background: #f5f6fa;
       text-align: center;
     }
-
     h1 {
       padding: 25px 0 10px;
       margin: 0 0 20px;
       background: white;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-
     #searchInput {
       width: 240px;
       padding: 12px;
@@ -29,7 +27,6 @@
       border-radius: 8px;
       font-size: 15px;
     }
-
     #searchBtn {
       padding: 12px 18px;
       margin-left: 8px;
@@ -40,9 +37,6 @@
       font-weight: 600;
       cursor: pointer;
     }
-
-    #searchBtn:hover { background: #3958d5; }
-
     select {
       padding: 10px 12px;
       margin: 10px 6px;
@@ -51,7 +45,6 @@
       border: 1px solid #ccc;
       background: white;
     }
-
     #randomBtn {
       background: #6c5ce7;
       color: white;
@@ -61,30 +54,19 @@
       cursor: pointer;
       margin-left: 10px;
     }
-
-    #randomBtn:hover { background: #5a4bd8; }
-
     #result {
       max-width: 600px;
       margin: 30px auto;
       padding: 0 20px;
       text-align: left;
     }
-
     .result-card {
       background: white;
       padding: 16px;
       margin-bottom: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: 0.15s;
     }
-
-    .result-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
-
     .tag {
       display: inline-block;
       padding: 4px 10px;
@@ -93,21 +75,24 @@
       color: white;
       margin-bottom: 8px;
     }
-
-    .tag-분식 { background:#ff7675; }
-    .tag-간편식 { background:#fdcb6e; }
-    .tag-야식 { background:#6c5ce7; }
-    .tag-동남아 { background:#00cec9; }
-    .tag-일식 { background:#0984e3; }
-    .tag-중식 { background:#d63031; }
-    .tag-양식 { background:#e17055; }
-    .tag-한식 { background:#2ecc71; }
-    .tag-술집 { background:#636e72; }
-
-    .store-name { font-size:18px; font-weight:bold; }
-    .store-sub { font-size:14px; color:#555; margin:4px 0; }
-    .store-price { font-size:14px; font-weight:bold; color:#444; }
-
+    .tag-분식{background:#ff7675;}
+    .tag-간편식{background:#fdcb6e;}
+    .tag-야식{background:#6c5ce7;}
+    .tag-동남아{background:#00cec9;}
+    .tag-일식{background:#0984e3;}
+    .tag-중식{background:#d63031;}
+    .tag-양식{background:#e17055;}
+    .tag-한식{background:#2ecc71;}
+    .tag-술집{background:#636e72;}
+    .store-name {
+      display:block;
+      font-size:18px;
+      font-weight:bold;
+      color:#222;
+      text-decoration:none;
+    }
+    .store-sub{font-size:14px;color:#555;margin:4px 0;}
+    .store-price{font-size:14px;font-weight:bold;color:#444;}
     .fav-btn {
       float:right;
       border:none;
@@ -119,196 +104,121 @@
 </head>
 
 <body>
-  <h1>HY-ERICA 식당 검색기</h1>
+<h1>HY-ERICA 식당 검색기</h1>
 
-  <input type="text" id="searchInput" placeholder="키워드 입력…" />
-  <button id="searchBtn">검색</button><br/>
+<input id="searchInput" placeholder="키워드 입력…" />
+<button id="searchBtn">검색</button><br/>
 
-  <select id="categorySelect">
-    <option value="전체">전체</option>
-    <option value="분식">분식</option>
-    <option value="간편식">간편식</option>
-    <option value="야식">야식</option>
-    <option value="동남아">동남아</option>
-    <option value="일식">일식</option>
-    <option value="중식">중식</option>
-    <option value="양식">양식</option>
-    <option value="한식">한식</option>
-    <option value="술집">술집</option>
-  </select>
+<select id="categorySelect">
+  <option value="전체">전체</option>
+  <option value="분식">분식</option>
+  <option value="간편식">간편식</option>
+  <option value="야식">야식</option>
+  <option value="동남아">동남아</option>
+  <option value="일식">일식</option>
+  <option value="중식">중식</option>
+  <option value="양식">양식</option>
+  <option value="한식">한식</option>
+  <option value="술집">술집</option>
+</select>
 
-  <select id="priceSelect">
-    <option value="전체">전체</option>
-    <option value="1만원 이하">1만원 이하</option>
-    <option value="2만원 이하">2만원 이하</option>
-    <option value="3만원 이하">3만원 이하</option>
-  </select>
+<select id="priceSelect">
+  <option value="전체">전체</option>
+  <option value="1만원 이하">1만원 이하</option>
+  <option value="2만원 이하">2만원 이하</option>
+  <option value="3만원 이하">3만원 이하</option>
+</select>
 
-  <label>
-    <input type="checkbox" id="favOnly" /> ⭐ 즐겨찾기만 보기
-  </label>
+<label>
+  <input type="checkbox" id="favOnly"> ⭐ 즐겨찾기만 보기
+</label>
 
-  <button id="randomBtn">오늘 뭐 먹지?</button>
-  <hr/>
+<button id="randomBtn">오늘 뭐 먹지?</button>
+<hr/>
+<div id="result"></div>
 
-  <div id="result"></div>
+<!-- ================= JS (DATA + LOGIC) ================= -->
+<script>
+/* ---------- DATA ---------- */
+const STORE_DATA = [
+  { category:"분식", name:"명가떡볶이", sub:"떡볶이, 김밥", price:"1만원 이하" },
+  { category:"간편식", name:"이삭토스트", sub:"토스트", price:"1만원 이하" },
+  { category:"일식", name:"유메", sub:"라멘", price:"1만원 이하" },
+  { category:"중식", name:"북경반점", sub:"짜장면, 짬뽕", price:"1만원 이하" },
+  { category:"한식", name:"산들에한상", sub:"백반", price:"1만원 이하" },
+  { category:"술집", name:"역전할머니맥주", sub:"맥주", price:"2만원 이하" }
+];
 
-  <!-- ================= data.js + script.js 병합 ================= -->
-  <script>
-    /* ---------- data.js (원본 그대로) ---------- */
-    const STORE_DATA = [
-      { category: "분식", name: "명가떡볶이", sub: "떡볶이, 김밥", price: "1만원 이하" },
-      { category: "분식", name: "참새방앗간", sub: "즉석 떡볶이", price: "1만원 이하" },
-      { category: "분식", name: "셀분식", sub: "종합분식", price: "1만원 이하" },
-      { category: "분식", name: "신전떡볶이", sub: "떡볶이, 김밥", price: "1만원 이하" },
+/* ---------- LOGIC ---------- */
+const FAV_KEY = "favs";
+const getFavs = () => JSON.parse(localStorage.getItem(FAV_KEY) || "[]");
+const setFavs = f => localStorage.setItem(FAV_KEY, JSON.stringify(f));
 
-      { category: "간편식", name: "도스마스", sub: "부리또", price: "1만원 이하" },
-      { category: "간편식", name: "밀플랜비", sub: "부리또", price: "1만원 이하" },
-      { category: "간편식", name: "행컵", sub: "컵밥", price: "1만원 이하" },
-      { category: "간편식", name: "한솥도시락", sub: "도시락", price: "1만원 이하" },
-      { category: "간편식", name: "정직유부", sub: "유부초밥", price: "1만원 이하" },
-      { category: "간편식", name: "봉구스밥버거", sub: "밥버거, 컵밥", price: "1만원 이하" },
-      { category: "간편식", name: "이삭토스트", sub: "토스트", price: "1만원 이하" },
-      { category: "간편식", name: "서브웨이", sub: "샌드위치", price: "2만원 이하" },
-      { category: "간편식", name: "올리브샌드위치", sub: "샌드위치", price: "1만원 이하" },
+const searchInput = document.getElementById("searchInput");
+const categorySelect = document.getElementById("categorySelect");
+const priceSelect = document.getElementById("priceSelect");
+const favOnly = document.getElementById("favOnly");
+const searchBtn = document.getElementById("searchBtn");
+const randomBtn = document.getElementById("randomBtn");
 
-      { category: "야식", name: "더치킨", sub: "치킨", price: "2만원 이하" },
-      { category: "야식", name: "미쳐버린파닭", sub: "치킨", price: "2만원 이하" },
-      { category: "야식", name: "대학통닭", sub: "치킨", price: "2만원 이하" },
-      { category: "야식", name: "계림원", sub: "치킨", price: "3만원 이하" },
+function priceMatch(storePrice, selectedPrice){
+  if(selectedPrice==="전체") return true;
+  if(!storePrice.includes("이하")) return false;
+  const L={"1만원 이하":1,"2만원 이하":2,"3만원 이하":3};
+  return L[storePrice] <= L[selectedPrice];
+}
 
-      { category: "동남아", name: "인더비엣", sub: "쌀국수, 볶음밥", price: "2만원 이하" },
-      { category: "동남아", name: "남월", sub: "쌀국수, 볶음밥", price: "1만원 이하" },
-      { category: "동남아", name: "자이카", sub: "카레", price: "1만원 이하" },
-      { category: "동남아", name: "카바레식당", sub: "카레, 크림우동", price: "2만원 이하" },
+function getFiltered(){
+  const kw = searchInput.value.trim();
+  const favs = getFavs();
+  return STORE_DATA.filter(s =>
+    (categorySelect.value==="전체" || s.category===categorySelect.value) &&
+    priceMatch(s.price, priceSelect.value) &&
+    (kw==="" || s.name.includes(kw) || s.sub.includes(kw)) &&
+    (!favOnly.checked || favs.includes(s.name))
+  );
+}
 
-      { category: "일식", name: "유메", sub: "라멘", price: "1만원 이하" },
-      { category: "일식", name: "오벤라멘", sub: "라멘", price: "1만원 이하" },
-      { category: "일식", name: "백소정", sub: "돈가츠", price: "2만원 이하" },
-      { category: "일식", name: "코운즈", sub: "라멘, 돈가츠", price: "2만원 이하" },
-      { category: "일식", name: "면식당", sub: "라멘, 돈가츠", price: "2만원 이하" },
-      { category: "일식", name: "에비수", sub: "롤, 덮밥", price: "2만원 이하" },
-      { category: "일식", name: "한그릇", sub: "덮밥", price: "2만원 이하" },
-      { category: "일식", name: "핵밥", sub: "덮밥", price: "2만원 이하" },
+function render(list){
+  const box = document.getElementById("result");
+  const favs = getFavs();
+  if(!list.length){ box.innerHTML="<p>검색 결과 없음</p>"; return; }
 
-      { category: "중식", name: "북경반점", sub: "짜장면, 짬뽕", price: "1만원 이하" },
-      { category: "중식", name: "도야짬뽕", sub: "짜장면, 짬뽕", price: "2만원 이하" },
-      { category: "중식", name: "전국5대짬뽕 교동짬뽕", sub: "짜장면, 짬뽕", price: "1만원 이하" },
-      { category: "중식", name: "찐하오마라탕", sub: "마라탕", price: "1800/100g" },
-      { category: "중식", name: "라화쿵푸", sub: "마라탕", price: "1850/100g" },
-      { category: "중식", name: "홍성마라미방", sub: "마라탕", price: "1800/100g" },
-      { category: "중식", name: "산시도삭면", sub: "딤섬, 도삭면", price: "1만원 이하" },
-      { category: "중식", name: "대홍훠거샤브샤브", sub: "훠궈", price: "3만원 이하" },
+  box.innerHTML = list.map(s=>{
+    const star = favs.includes(s.name) ? "★" : "⭐";
+    return `
+      <div class="result-card">
+        <span class="tag tag-${s.category}">${s.category}</span>
+        <button class="fav-btn" data-name="${s.name}">${star}</button>
+        <a class="store-name" target="_blank"
+          href="https://map.naver.com/v5/search/${encodeURIComponent(s.name)}">${s.name}</a>
+        <div class="store-sub">${s.sub}</div>
+        <div class="store-price">${s.price}</div>
+      </div>`;
+  }).join("");
 
-      { category: "양식", name: "양식당", sub: "파스타", price: "2만원 이하" },
-      { category: "양식", name: "토핑온피테스", sub: "버거", price: "1만원 이하" },
-      { category: "양식", name: "엔의식탁", sub: "파스타", price: "2만원 이하" },
-      { category: "양식", name: "성북동경양식", sub: "커틀릿", price: "2만원 이하" },
-      { category: "양식", name: "브라운돈까스", sub: "커틀릿", price: "2만원 이하" },
-      { category: "양식", name: "은화수식당", sub: "커틀릿", price: "2만원 이하" },
-      { category: "양식", name: "언니네화덕피자", sub: "피자, 파스타", price: "2만원 이하" },
-      { category: "양식", name: "피자스쿨", sub: "피자", price: "1만원 이하" },
-      { category: "양식", name: "버텍스", sub: "미국식 덮밥", price: "2만원 이하" },
-      { category: "양식", name: "페퍼로니네트", sub: "피자", price: "3만원 이하" },
-
-      { category: "한식", name: "예삿닭갈비감자탕", sub: "닭갈비, 감자탕", price: "3만원 이하" },
-      { category: "한식", name: "유가네닭갈비", sub: "닭갈비", price: "2만원 이하" },
-      { category: "한식", name: "오무라이스", sub: "덮밥", price: "1만원 이하" },
-      { category: "한식", name: "교반옥식비빔밥", sub: "비빔밥", price: "1만원 이하" },
-      { category: "한식", name: "홍익돈까스", sub: "돈까스", price: "1만원 이하" },
-      { category: "한식", name: "산들에한상", sub: "백반", price: "1만원 이하" },
-      { category: "한식", name: "가전고기", sub: "돼지고기", price: "2만원 이하" },
-
-      { category: "술집", name: "역전할머니맥주", sub: "맥주, 호프", price: "2만원 이하" },
-      { category: "술집", name: "만취", sub: "요리주점", price: "2만원 이하" },
-      { category: "술집", name: "A+", sub: "요리주점", price: "2만원 이하" },
-      { category: "술집", name: "더솥", sub: "요리주점", price: "2만원 이하" },
-      { category: "술집", name: "로드락비어", sub: "맥주, 호프", price: "2만원 이하" },
-      { category: "술집", name: "밤새", sub: "막걸리", price: "2만원 이하" },
-      { category: "술집", name: "락(樂)", sub: "요리주점", price: "2만원 이하" },
-      { category: "술집", name: "달달포차", sub: "포장마차", price: "2만원 이하" }
-    ];
-
-    /* ---------- script.js (원본 그대로) ---------- */
-    console.log("script.js 로드됨");
-
-    const FAV_KEY = "favs";
-    const getFavs = () => JSON.parse(localStorage.getItem(FAV_KEY) || "[]");
-    const setFavs = list => localStorage.setItem(FAV_KEY, JSON.stringify(list));
-
-    function priceMatch(storePrice, selectedPrice) {
-      if (selectedPrice === "전체") return true;
-      if (!storePrice.includes("이하")) return false;
-      const L = { "1만원 이하":1, "2만원 이하":2, "3만원 이하":3 };
-      return L[storePrice] <= L[selectedPrice];
-    }
-
-    function getFilteredStores({ keyword, selectedCategory, selectedPrice, favOnly }) {
-      const favs = getFavs();
-      return STORE_DATA.filter(s =>
-        (selectedCategory==="전체"||s.category===selectedCategory) &&
-        priceMatch(s.price, selectedPrice) &&
-        (keyword===""||s.name.includes(keyword)||s.sub.includes(keyword)) &&
-        (!favOnly||favs.includes(s.name))
-      );
-    }
-
-    function showResult(list) {
-      const box = document.getElementById("result");
-      const favs = getFavs();
-      if (!list.length) return box.innerHTML="<p>검색 결과 없음</p>";
-      box.innerHTML = list.map(s=>{
-        const star = favs.includes(s.name)?"★":"⭐";
-        return `
-          <div class="result-card">
-            <span class="tag tag-${s.category}">${s.category}</span>
-            <button class="fav-btn" data-name="${s.name}">${star}</button>
-            <a class="store-name" target="_blank"
-               href="https://map.naver.com/v5/search/${encodeURIComponent(s.name)}">${s.name}</a>
-            <div class="store-sub">${s.sub}</div>
-            <div class="store-price">${s.price}</div>
-          </div>`;
-      }).join("");
-
-      document.querySelectorAll(".fav-btn").forEach(b=>{
-        b.onclick=()=>{
-          let f=getFavs();
-          f=f.includes(b.dataset.name)?f.filter(v=>v!==b.dataset.name):[...f,b.dataset.name];
-          setFavs(f); autoSearch();
-        };
-      });
-    }
-
-    function autoSearch() {
-      showResult(getFilteredStores({
-        keyword:searchInput.value.trim(),
-        selectedCategory:categorySelect.value,
-        selectedPrice:priceSelect.value,
-        favOnly:favOnly.checked
-      }));
-    }
-
-    const searchInput = document.getElementById("searchInput");
-    const categorySelect = document.getElementById("categorySelect");
-    const priceSelect = document.getElementById("priceSelect");
-    const favOnly = document.getElementById("favOnly");
-
-    searchBtn.onclick = autoSearch;
-    categorySelect.onchange = autoSearch;
-    priceSelect.onchange = autoSearch;
-    favOnly.onchange = autoSearch;
-
-    randomBtn.onclick = ()=>{
-      const list=getFilteredStores({
-        keyword:searchInput.value.trim(),
-        selectedCategory:categorySelect.value,
-        selectedPrice:priceSelect.value,
-        favOnly:false
-      });
-      if(!list.length) return alert("조건에 맞는 식당이 없습니다!");
-      showResult([list[Math.floor(Math.random()*list.length)]]);
+  document.querySelectorAll(".fav-btn").forEach(b=>{
+    b.onclick=()=>{
+      let f=getFavs();
+      f=f.includes(b.dataset.name)?f.filter(v=>v!==b.dataset.name):[...f,b.dataset.name];
+      setFavs(f);
+      render(getFiltered());
     };
-  </script>
+  });
+}
+
+function search(){ render(getFiltered()); }
+
+searchBtn.onclick = search;
+categorySelect.onchange = search;
+priceSelect.onchange = search;
+favOnly.onchange = search;
+
+randomBtn.onclick = ()=>{
+  const list = getFiltered();
+  if(!list.length){ alert("조건에 맞는 식당이 없습니다!"); return; }
+  render([list[Math.floor(Math.random()*list.length)]]);
+};
+</script>
 </body>
 </html>
-s
